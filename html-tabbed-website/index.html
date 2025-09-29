@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Who Am I?</title>
+<link rel="stylesheet" href="styles.css" />
+<body>
+  <div class="container">
+    <nav class="sidebar">
+      <h3>Navigation</h3>
+      <button class="tab-btn active" data-tab="landing">Landing Page</button>
+      <button class="tab-btn" data-tab="projects">Projects</button>
+      <button class="tab-btn" data-tab="resume">Resume</button>
+      <button class="tab-btn" data-tab="contacts">Contacts</button>
+    </nav>
+    <main class="tab-content">
+      <section id="landing" class="tab-panel active">
+        <h2>Landing Page</h2>
+        <p>Welcome to my personal website!</p>
+        <p>I'm Cristiano Cordì, a bioinformatician with a passion for machine learning and regulatory genomics.</p>
+        <p>Here you can find information about my projects, CV, and how to contact me.</p>
+      </section>
+      <section id="projects" class="tab-panel">
+        <h2>Projects</h2>
+        <ul>
+          <li><a href="#">TRIDENT</a> — Tri-Dimensional Embeddings Navigation Tool.</li>
+          <li><a href="#">OpenNano</a> — GeoMX Spatial Transcriptomics Data Analysis.</li>
+          <li><a href="#">Master Thesis</a> — Deciphering organism-wide gene regulation with genomic deep learning in C. elegans.</li>
+          <li><a href="#">Bachelor Thesis</a> — The expression of CCRL2 combined to specialized endothelial cell signature is prognostic in human lung cancers.</li>
+        </ul>
+      </section>
+      <section id="resume" class="tab-panel">
+        <h2>Resume</h2>
+        <p>Here you can find my resume detailing my education, experience, and skills.</p>
+      </section>
+      <section id="contacts" class="tab-panel">
+        <h2>Contacts</h2>
+        <p>Email: cordi.cristiano@gmail.com</p>
+        <p>LinkedIn: <a href="#">Cristiano Cordì</a></p>
+        <p>GitHub: <a href="#">CrowdObserver</a></p>
+      </section>
+    </main>
+  </div>
+  <footer><small>© 2025 Cristiano Cordì</small></footer>
+  <script src="scripts.js"></script>
+</body>
+</html>
