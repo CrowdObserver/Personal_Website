@@ -43,3 +43,13 @@ function showProjectsGrid() {
     detail.classList.remove('active');
   });
 }
+
+// Add poster click handler for full-size viewing
+document.addEventListener('DOMContentLoaded', function() {
+  const posterImage = document.querySelector('.poster-image');
+  if (posterImage) {
+    posterImage.addEventListener('click', function() {
+      window.open(this.src, '_blank');
+    });
+  }
+});

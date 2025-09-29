@@ -35,6 +35,7 @@ body {
   color: #7e90a3;
   border-bottom: 2px solid #7e90a3;
   padding-bottom: 10px;
+  font-size: 1.4rem;
 }
 
 .tab-btn {
@@ -74,6 +75,7 @@ body {
 
 .tab-content h2 {
   color: #7e90a3;
+  font-size: 2.5rem;
 }
 
 .tab-panel {
@@ -88,7 +90,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
-  margin-top: 150px;
+  margin-top: 130px;
 }
 
 .project-card {
@@ -114,9 +116,8 @@ body {
 }
 
 .project-logo {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
+  width: 150px;
+  height: 150px;
   margin-bottom: 15px;
   object-fit: cover;
 }
@@ -186,6 +187,139 @@ body {
 .project-detail li {
   margin-bottom: 8px;
   line-height: 1.5;
+}
+
+/* Project Detail Split Layout */
+.project-content-split {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.project-left {
+  flex: 1;
+  min-width: 0; /* Allows flex item to shrink */
+}
+
+.project-right {
+  flex: 1;
+  min-width: 400px;
+}
+
+.pdf-container {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 20px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+.pdf-container h4 {
+  color: #7e90a3;
+  margin-top: 0;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.pdf-viewer {
+  flex: 1;
+  width: 100%;
+  border: none;
+  border-radius: 4px;
+}
+
+.pdf-fallback {
+  display: none;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.pdf-fallback a {
+  color: #7e90a3;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.pdf-fallback a:hover {
+  text-decoration: underline;
+}
+
+/* Show fallback if embed doesn't work */
+.pdf-viewer:not([src]) + .pdf-fallback {
+  display: block;
+}
+
+/* Responsive design for PDF viewer */
+@media (max-width: 1024px) {
+  .project-content-split {
+    flex-direction: column;
+  }
+  
+  .project-right {
+    min-width: auto;
+  }
+  
+  .pdf-container {
+    height: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .pdf-container {
+    height: 400px;
+    padding: 15px;
+  }
+}
+
+/* Poster container styles */
+.poster-container {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 20px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.poster-container h4 {
+  color: #7e90a3;
+  margin-top: 0;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.poster-image {
+  max-width: 100%;
+  max-height: calc(100% - 60px); /* Account for title and padding */
+  object-fit: contain;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.poster-image:hover {
+  transform: scale(1.02);
+}
+
+.poster-fallback {
+  margin-top: 10px;
+  text-align: center;
+  display: none;
+}
+
+.poster-fallback a {
+  color: #7e90a3;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.poster-fallback a:hover {
+  text-decoration: underline;
 }
 
 @keyframes fadeIn {
