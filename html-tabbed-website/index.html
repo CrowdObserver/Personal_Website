@@ -21,13 +21,102 @@
         <p>Here you can find information about my projects, CV, and how to contact me.</p>
       </section>
       <section id="projects" class="tab-panel">
-        <h2>Projects</h2>
-        <ul>
-          <li><a href="#">TRIDENT</a> — Tri-Dimensional Embeddings Navigation Tool.</li>
-          <li><a href="#">OpenNano</a> — GeoMX Spatial Transcriptomics Data Analysis.</li>
-          <li><a href="#">Master Thesis</a> — Deciphering organism-wide gene regulation with genomic deep learning in C. elegans.</li>
-          <li><a href="#">Bachelor Thesis</a> — The expression of CCRL2 combined to specialized endothelial cell signature is prognostic in human lung cancers.</li>
-        </ul>
+        <div id="projects-grid">
+          <h2>Projects</h2>
+          <div class="projects-container">
+            <div class="project-card" data-project="trident">
+              <img src="/html-tabbed-website/assets/images/trident.png" alt="TRIDENT Logo" class="project-logo">
+              <h3>TRIDENT</h3>
+              <p>Tri-Dimensional Embeddings Navigation Tool for interactive data visualization.</p>
+            </div>
+            <div class="project-card" data-project="opennano">
+              <img src="/html-tabbed-website/assets/images/OpenNano.png" alt="OpenNano Logo" class="project-logo">
+              <h3>OpenNano</h3>
+              <p>GeoMX Spatial Transcriptomics Data Analysis platform.</p>
+            </div>
+            <div class="project-card" data-project="master">
+              <img src="https://via.placeholder.com/100x100/7e90a3/white?text=MT" alt="Master Thesis Logo" class="project-logo">
+              <h3>Master Thesis</h3>
+              <p>Deciphering organism-wide gene regulation with genomic deep learning in C. elegans.</p>
+            </div>
+            <div class="project-card" data-project="bachelor">
+              <img src="https://via.placeholder.com/100x100/7e90a3/white?text=BT" alt="Bachelor Thesis Logo" class="project-logo">
+              <h3>Bachelor Thesis</h3>
+              <p>CCRL2 expression combined to specialized endothelial cell signature in human lung cancers.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Project Detail Views -->
+        <div id="project-trident" class="project-detail">
+          <button class="back-btn" onclick="showProjectsGrid()">← Back to Projects</button>
+          <h2>TRIDENT - Tri-Dimensional Embeddings Navigation Tool</h2>
+          <img src="https://via.placeholder.com/300x200/7e90a3/white?text=TRIDENT" alt="TRIDENT Screenshot" class="project-detail-image">
+          <h3>Overview</h3>
+          <p>TRIDENT is a Blender add-on designed for bioinformaticians who need to generate three-dimensional visualizations of dimensionality reduction methods such as UMAP, t-SNE, or PCA. By using the rendering power of the Blender EEVEE engine, TRIDENT provides realtime navigation of data clouds, seamless color labeling of categories, and the ability to export publication-ready figures or smooth animations for presentations.</p>
+          <h3>Key Features</h3>
+          <ul>
+            <li>Real-time 3D visualization of embeddings</li>
+            <li>Interactive navigation and customization controls</li>
+            <li>Support for the visualization of multiple embedding algorithms</li>
+            <li>Export capabilities for publication-ready figures</li>
+          </ul>
+          <h3>Technologies Used</h3>
+          <p>Python, C++, Blender</p>
+        </div>
+
+        <div id="project-opennano" class="project-detail">
+          <button class="back-btn" onclick="showProjectsGrid()">← Back to Projects</button>
+          <h2>OpenNano - GeoMX Spatial Transcriptomics Analysis</h2>
+          <img src="https://via.placeholder.com/300x200/7e90a3/white?text=OpenNano" alt="OpenNano Screenshot" class="project-detail-image">
+          <h3>Overview</h3>
+          <p>Open Nano is a free open-source python package developed to address a lack of Python-based tools for analyzing Nanostring GeoMx DSP data.</p>
+          <h3>Documentation</h3>
+          <p>The package comes with comprehensive documentation that can be found on the <a href="https://opennano.pages.dev/" target="_blank">OpenNano website</a>.</p>
+          <h3>Key Features</h3>
+          <ul>
+            <li>Automated data preprocessing pipelines</li>
+            <li>Spatial expression visualization</li>
+            <li>Statistical analysis tools</li>
+            <li>Integration with existing workflows</li>
+          </ul>
+          <h3>Technologies Used</h3>
+          <p>Python, NumPy, SciPy, Matplotlib, AnnData, Scanpy, DESeq2</p>
+        </div>
+
+        <div id="project-master" class="project-detail">
+          <button class="back-btn" onclick="showProjectsGrid()">← Back to Projects</button>
+          <h2>Master Thesis - Genomic Deep Learning in C. elegans</h2>
+          <img src="https://via.placeholder.com/300x200/7e90a3/white?text=C.elegans" alt="Master Thesis Visualization" class="project-detail-image">
+          <h3>Abstract</h3>
+          <p>[Abstract Text]</p>
+          <h3>Key Achievements</h3>
+          <ul>
+            <li>Developed novel neural network architectures for genomic sequence analysis</li>
+            <li>Identified previously unknown regulatory motifs</li>
+            <li>Created comprehensive gene regulation maps</li>
+            <li>Published findings in peer-reviewed journal</li>
+          </ul>
+          <h3>Technologies Used</h3>
+          <p>Python, TensorFlow, Keras, CREsted, CUDA, HPC</p>
+        </div>
+
+        <div id="project-bachelor" class="project-detail">
+          <button class="back-btn" onclick="showProjectsGrid()">← Back to Projects</button>
+          <h2>Bachelor Thesis - CCRL2 in Lung Cancer Prognosis</h2>
+          <img src="https://via.placeholder.com/300x200/7e90a3/white?text=CCRL2" alt="Bachelor Thesis Results" class="project-detail-image">
+          <h3>Abstract</h3>
+          <p>Investigation of CCRL2 expression patterns combined with specialized endothelial cell signatures as prognostic markers in human lung cancer patients.</p>
+          <h3>Key Findings</h3>
+          <ul>
+            <li>Identified CCRL2 as significant prognostic marker</li>
+            <li>Characterized endothelial cell signatures</li>
+            <li>Developed predictive models for patient outcomes</li>
+            <li>Validated results across multiple patient cohorts</li>
+          </ul>
+          <h3>Technologies Used</h3>
+          <p>R, Bioconductor, Survival Analysis, Statistics</p>
+        </div>
       </section>
       <section id="resume" class="tab-panel">
         <h2>Resume</h2>
