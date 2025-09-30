@@ -11,6 +11,12 @@
   .pdf-container {
     height: 500px;
   }
+  
+  /* Landing adjustments for tablets */
+  .landing-content {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -31,6 +37,14 @@
     left: auto;
     width: 100%;
     margin-bottom: 20px;
+  }
+
+  /* Landing full width on mobile */
+  .landing-content {
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-top: 40px;
+    border-radius: 4px;
   }
 
   /* Projects grid */
@@ -67,5 +81,21 @@
   
   .contact-info {
     font-size: 13px;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  .container {
+    margin: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  .landing-content {
+    margin-left: -15px;
+    margin-right: -15px;
+    padding-top: 30px;
+    border-radius: 0;
   }
 }
