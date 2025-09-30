@@ -53,3 +53,42 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 });
+
+// Email copy functionality
+function copyEmail() {
+  const email = 'cordi.cristiano@gmail.com';
+  const copyText = document.getElementById('copy-text');
+  
+  // Copy to clipboard
+  navigator.clipboard.writeText(email).then(function() {
+    // Change text to "Copied to clipboard"
+    copyText.textContent = 'Copied to clipboard!';
+    copyText.classList.add('copied');
+    copyText.classList.add('show'); // Ensure it stays visible
+    
+    // Reset after 2 seconds
+    setTimeout(function() {
+      copyText.textContent = 'Copy to clipboard';
+      copyText.classList.remove('copied');
+      copyText.classList.remove('show'); // Hide the message box
+    }, 1000);
+  }).catch(function(err) {
+    // Fallback for older browsers
+    console.error('Could not copy text: ', err);
+    alert('Email: ' + email);
+  });
+}
+
+function showCopyText() {
+  const copyText = document.getElementById('copy-text');
+  if (!copyText.classList.contains('copied')) {
+    copyText.classList.add('show');
+  }
+}
+
+function hideCopyText() {
+  const copyText = document.getElementById('copy-text');
+  if (!copyText.classList.contains('copied')) {
+    copyText.classList.remove('show');
+  }
+}
