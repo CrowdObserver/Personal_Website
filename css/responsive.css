@@ -1,0 +1,71 @@
+/* Responsive design styles */
+@media (max-width: 1024px) {
+  .project-content-split {
+    flex-direction: column;
+  }
+  
+  .project-right {
+    min-width: auto;
+  }
+  
+  .pdf-container {
+    height: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Landing video adjustments */
+  .landing-video {
+    object-position: center;
+  }
+
+  /* Layout adjustments */
+  .container {
+    padding-left: 20px;
+    margin: 10px;
+  }
+  
+  .sidebar {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  /* Projects grid */
+  .projects-container {
+    grid-template-columns: 1fr;
+  }
+
+  /* PDF container */
+  .pdf-container {
+    height: 400px;
+    padding: 15px;
+  }
+
+  /* Contacts */
+  .contacts-container {
+    padding: 60px 20px;
+  }
+  
+  .contact-btn {
+    padding: 15px 20px;
+    font-size: 14px;
+  }
+  
+  .contact-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+  }
+  
+  .contact-label {
+    min-width: 60px;
+    font-size: 14px;
+  }
+  
+  .contact-info {
+    font-size: 13px;
+  }
+}

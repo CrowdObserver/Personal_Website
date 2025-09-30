@@ -1,0 +1,139 @@
+/* Contact Section Styles */
+.contacts-container {
+  text-align: center;
+  padding: 100px 40px 120px 40px;
+  max-width: 600px;
+  margin: 0 auto;
+  overflow: visible;
+}
+
+.contacts-container h2 {
+  color: #7e90a3;
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+.contacts-container p {
+  color: #666;
+  margin-bottom: 40px;
+  font-size: 1.1em;
+}
+
+.contact-buttons {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  gap: 20px;
+  align-items: center;
+  overflow: visible;
+}
+
+.contact-btn {
+  display: flex;
+  align-items: center;
+  padding: 20px 30px;
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #333;
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.contact-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.contact-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 15px;
+  min-width: 30px;
+  object-fit: contain;
+}
+
+.contact-label {
+  font-weight: bold;
+  color: #7e90a3;
+  margin-right: 10px;
+  min-width: 80px;
+  text-align: left;
+}
+
+.contact-info {
+  color: #666;
+  flex: 1;
+  text-align: center;
+}
+
+/* Email button specific styles */
+.email-btn {
+  position: relative;
+  z-index: 20;
+}
+
+.copy-text {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%) translateY(5px);
+  background: #7e90a3;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  opacity: 0;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  white-space: nowrap;
+  z-index: 100;
+}
+
+.copy-text::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid #7e90a3;
+  z-index: 101; 
+}
+
+.copy-text.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.copy-text.copied {
+  background: #28a745;
+}
+
+.copy-text.copied::before {
+  border-bottom-color: #28a745;
+}
+
+.email-btn:hover {
+  border-color: #7e90a3;
+}
+
+.linkedin-btn:hover {
+  border-color: #0077b5;
+  background: #f8f9fa;
+}
+
+.github-btn:hover {
+  border-color: #333;
+  background: #f8f9fa;
+}

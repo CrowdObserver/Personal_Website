@@ -1,11 +1,15 @@
 <!doctype html>
 <html lang="en">
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Who Am I?</title>
-<link rel="stylesheet" href="styles.css" />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Who Am I?</title>
+  <link rel="stylesheet" href="./css/main.css" />
+</head>
+
 <body>
   <div class="container">
+    <!-- Navigation Sidebar -->
     <nav class="sidebar">
       <h3>Navigation</h3>
       <button class="tab-btn active" data-tab="landing">Landing Page</button>
@@ -13,7 +17,11 @@
       <button class="tab-btn" data-tab="resume">Resume</button>
       <button class="tab-btn" data-tab="contacts">Contacts</button>
     </nav>
+
+    <!-- Main Content Area -->
     <main class="tab-content">
+      
+      <!-- Landing Page Section -->
       <section id="landing" class="tab-panel active">
         <div class="landing-content">
           <h2>Welcome to my website!</h2>
@@ -26,41 +34,58 @@
           </video>
         </div>
       </section>
+
+      <!-- Projects Section -->
       <section id="projects" class="tab-panel">
+        
+        <!-- Projects Grid View -->
         <div id="projects-grid">
           <h2>Projects</h2>
           <div class="projects-container">
+            
+            <!-- TRIDENT Project Card -->
             <div class="project-card" data-project="trident">
               <img src="./assets/images/trident.png" alt="TRIDENT Logo" class="project-logo">
               <h3>TRIDENT</h3>
               <p>Tri-Dimensional Embeddings Navigation Tool for interactive data visualization.</p>
             </div>
+            
+            <!-- Master Thesis Project Card -->
             <div class="project-card" data-project="master">
               <img src="./assets/images/celegans.png" alt="Master Thesis Logo" class="project-logo">
               <h3>Master Thesis</h3>
               <p>Deciphering organism-wide gene regulation with genomic deep learning in C. elegans.</p>
             </div>
+            
+            <!-- OpenNano Project Card -->
             <div class="project-card" data-project="opennano">
               <img src="./assets/images/OpenNano.png" alt="OpenNano Logo" class="project-logo">
               <h3>OpenNano</h3>
               <p>GeoMX Spatial Transcriptomics Data Analysis platform.</p>
             </div>
+            
+            <!-- Bachelor Thesis Project Card -->
             <div class="project-card" data-project="bachelor">
               <img src="./assets/images/lungs.png" alt="Bachelor Thesis Logo" class="project-logo">
               <h3>Bachelor Thesis</h3>
               <p>CCRL2 expression combined to specialized endothelial cell signature in human lung cancers.</p>
             </div>
+            
           </div>
         </div>
         
         <!-- Project Detail Views -->
+        
+        <!-- TRIDENT Project Detail -->
         <div id="project-trident" class="project-detail">
           <button class="back-btn" onclick="showProjectsGrid()">← Back to Projects</button>
           <h2>TRIDENT - Tri-Dimensional Embeddings Navigation Tool</h2>
           <img src="https://via.placeholder.com/300x200/7e90a3/white?text=TRIDENT" alt="TRIDENT Screenshot" class="project-detail-image">
+          
           <h3>Overview</h3>
           <p>TRIDENT is a Blender add-on designed for bioinformaticians who need to generate three-dimensional visualizations of dimensionality reduction methods such as UMAP, t-SNE, or PCA.</p>
           <p> By using the rendering power of the Blender EEVEE engine, TRIDENT provides realtime navigation of data clouds, seamless color labeling of categories, and the ability to export publication-ready figures or smooth animations for presentations.</p>
+          
           <h3>Key Features</h3>
           <ul>
             <li>Real-time 3D visualization of embeddings</li>
@@ -68,19 +93,24 @@
             <li>Support for the visualization of multiple embedding algorithms</li>
             <li>Export capabilities for publication-ready figures</li>
           </ul>
+          
           <h3>Technologies Used</h3>
           <p>Python, C++, Blender</p>
         </div>
 
+        <!-- OpenNano Project Detail -->
         <div id="project-opennano" class="project-detail">
           <button class="back-btn" onclick="showProjectsGrid()">← Back to Projects</button>
           <h2>OpenNano - GeoMX Spatial Transcriptomics Analysis</h2>
+          
           <div class="project-content-split">
             <div class="project-left">
               <h3>Overview</h3>
               <p>Open Nano is a free open-source python package developed to address a lack of Python-based tools for analyzing Nanostring GeoMx DSP data.</p>
+              
               <h3>Documentation</h3>
               <p>The package comes with comprehensive documentation that can be found on the <a href="https://opennano.pages.dev/" target="_blank">OpenNano website</a>.</p>
+              
               <h3>Key Features</h3>
               <ul>
                 <li>Automated data preprocessing pipelines</li>
@@ -88,9 +118,11 @@
                 <li>Statistical analysis tools</li>
                 <li>Integration with existing workflows</li>
               </ul>
+              
               <h3>Technologies Used</h3>
               <p>Python, NumPy, SciPy, Matplotlib, AnnData, Scanpy, DESeq2</p>
             </div>
+            
             <div class="project-right">
               <div class="poster-container">
                 <h4>Project Poster</h4>
@@ -103,15 +135,18 @@
           </div>
         </div>
 
+        <!-- Master Thesis Project Detail -->
         <div id="project-master" class="project-detail">
           <button class="back-btn" onclick="showProjectsGrid()">← Back to Projects</button>
           <h2>Master Thesis - Genomic Deep Learning in C. elegans</h2>
+          
           <div class="project-content-split">
             <div class="project-left">
               <h3>Abstract</h3>
               <p>Understanding how the genome controls gene expression to create distinct cell types is a central problem in biology. DNA encodes regulatory instructions, but the mechanisms remain unclear.</p>
               <p>Here, I've applied deep learning to decode this regulatory grammar and predict single-cell gene expression. Using convolutional and attention-based models on Caenorhabditis elegans sequences, I've leveraged its well-mapped cellular landscape to study expression across all cell types. The models predict expression directly from DNA and represent a major advance.</p>
               <p>I've also built an integrated dataset spanning developmental stages and applied explainable machine learning to reveal regulatory features. This work offers new insight into genome regulation with applications in development and disease.</p>
+              
               <h3>Key Achievements</h3>
               <ul>
                 <li>Developed novel neural network architectures for genomic sequence analysis</li>
@@ -119,9 +154,11 @@
                 <li>Created comprehensive gene regulation maps</li>
                 <li>Published findings in peer-reviewed journal</li>
               </ul>
+              
               <h3>Technologies Used</h3>
               <p>Python, TensorFlow, Keras, CREsted, CUDA, HPC</p>
             </div>
+            
             <div class="project-right">
               <div class="pdf-container">
                 <h4>View Thesis Document</h4>
@@ -135,11 +172,14 @@
           </div>
         </div>
 
+        <!-- Bachelor Thesis Project Detail -->
         <div id="project-bachelor" class="project-detail">
           <button class="back-btn" onclick="showProjectsGrid()">← Back to Projects</button>
           <h2>Bachelor Thesis - CCRL2 in Lung Cancer Prognosis</h2>
+          
           <h3>Abstract</h3>
           <p>Investigation of CCRL2 expression patterns combined with specialized endothelial cell signatures as prognostic markers in human lung cancer patients.</p>
+          
           <h3>Key Findings</h3>
           <ul>
             <li>Identified CCRL2 as significant prognostic marker</li>
@@ -147,12 +187,17 @@
             <li>Developed predictive models for patient outcomes</li>
             <li>Validated results across multiple patient cohorts</li>
           </ul>
+          
           <h3>Technologies Used</h3>
           <p>R, Bioconductor, Survival Analysis, Statistics</p>
         </div>
+        
       </section>
+
+      <!-- Resume Section -->
       <section id="resume" class="tab-panel">
         <h2>Resume</h2>
+        
         <div class="project-content-split">
           <div class="project-left">
             <h3>Professional Summary</h3>
@@ -185,6 +230,7 @@
             <h3>Projects</h3>
             <p>I've developed open-source tools for the bioinformatics community, OpenNano and TRIDENT.</p>
           </div>
+          
           <div class="project-right">
             <div class="pdf-container">
               <h4>View Resume</h4>
@@ -197,10 +243,14 @@
           </div>
         </div>
       </section>
+
+      <!-- Contacts Section -->
       <section id="contacts" class="tab-panel">
         <div class="contacts-container">
           <h2>Contacts</h2>
+          
           <div class="contact-buttons">
+            <!-- Email Contact -->
             <button class="contact-btn email-btn" onclick="copyEmail()" onmouseover="showCopyText()" onmouseout="hideCopyText()">
               <img src="./assets/images/mail-icon.svg" alt="Email" class="contact-icon">
               <span class="contact-label">Email</span>
@@ -208,23 +258,33 @@
               <span class="copy-text" id="copy-text">Copy to clipboard</span>
             </button>
             
+            <!-- LinkedIn Contact -->
             <a href="https://www.linkedin.com/in/cristiano-cord%C3%AC-9ba463268/" target="_blank" class="contact-btn linkedin-btn">
               <img src="./assets/images/linkedin-icon.svg" alt="LinkedIn" class="contact-icon">
               <span class="contact-label">LinkedIn</span>
               <span class="contact-info">Cristiano Cordì</span>
             </a>
             
+            <!-- GitHub Contact -->
             <a href="https://github.com/CrowdObserver" target="_blank" class="contact-btn github-btn">
               <img src="./assets/images/github-icon.svg" alt="GitHub" class="contact-icon">
               <span class="contact-label">GitHub</span>
               <span class="contact-info">CrowdObserver</span>
             </a>
           </div>
+          
         </div>
       </section>
+      
     </main>
   </div>
-  <footer><small>© 2025 Cristiano Cordì</small></footer>
+
+  <!-- Footer -->
+  <footer>
+    <small>© 2025 Cristiano Cordì</small>
+  </footer>
+
+  <!-- JavaScript -->
   <script src="scripts.js"></script>
 </body>
 </html>

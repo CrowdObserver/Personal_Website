@@ -1,0 +1,9 @@
+/* Import all CSS modules */
+@import url('./base.css');
+@import url('./layout.css');
+@import url('./navigation.css');
+@import url('./tabs.css');
+@import url('./landing.css');
+@import url('./projects.css');
+@import url('./contacts.css');
+@import url('./responsive.css');
