@@ -15,10 +15,15 @@
     </nav>
     <main class="tab-content">
       <section id="landing" class="tab-panel active">
-        <div style="text-align: center; padding-top: 100px;">
+        <div class="landing-content">
           <h2>Welcome to my website!</h2>
           <p>I'm Cristiano Cordì, a bioinformatician with a passion for machine learning and regulatory genomics.</p>
           <p>Here you can find information about my projects, CV, and how to contact me.</p>
+          <video class="landing-video" autoplay muted loop playsinline>
+            <source src="/html-tabbed-website/assets/videos/background-video.webm" type="video/webm">
+            <!-- Fallback for browsers that don't support video -->
+            Your browser does not support the video tag.
+          </video>
         </div>
       </section>
       <section id="projects" class="tab-panel">
@@ -30,15 +35,15 @@
               <h3>TRIDENT</h3>
               <p>Tri-Dimensional Embeddings Navigation Tool for interactive data visualization.</p>
             </div>
-            <div class="project-card" data-project="opennano">
-              <img src="/html-tabbed-website/assets/images/OpenNano.png" alt="OpenNano Logo" class="project-logo">
-              <h3>OpenNano</h3>
-              <p>GeoMX Spatial Transcriptomics Data Analysis platform.</p>
-            </div>
             <div class="project-card" data-project="master">
               <img src="/html-tabbed-website/assets/images/celegans.png" alt="Master Thesis Logo" class="project-logo">
               <h3>Master Thesis</h3>
               <p>Deciphering organism-wide gene regulation with genomic deep learning in C. elegans.</p>
+            </div>
+            <div class="project-card" data-project="opennano">
+              <img src="/html-tabbed-website/assets/images/OpenNano.png" alt="OpenNano Logo" class="project-logo">
+              <h3>OpenNano</h3>
+              <p>GeoMX Spatial Transcriptomics Data Analysis platform.</p>
             </div>
             <div class="project-card" data-project="bachelor">
               <img src="/html-tabbed-website/assets/images/lungs.png" alt="Bachelor Thesis Logo" class="project-logo">
@@ -150,7 +155,7 @@
         <h2>Resume</h2>
         <p>Here you can find my resume detailing my education, experience, and skills.</p>
       </section>
-            <section id="contacts" class="tab-panel">
+      <section id="contacts" class="tab-panel">
         <div class="contacts-container">
           <h2>Contacts</h2>
           <div class="contact-buttons">
