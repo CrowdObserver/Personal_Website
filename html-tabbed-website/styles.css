@@ -106,6 +106,7 @@ body {
   object-position: center calc(100% - 50px); 
   z-index: 0;
   border-radius: 8px;
+  pointer-events: none;
 }
 
 /* Overlay for better text readability */
