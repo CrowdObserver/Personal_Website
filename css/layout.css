@@ -1,12 +1,12 @@
 /* Layout and container styles */
 .container {
   position: relative;
-  max-width: 1900px;
+  max-width: calc(100vw - 10px);
   margin: 20px auto;
   padding-left: 260px;
   padding-right: 20px;
   padding-top: 20px;
-  min-height: 1000px;
+  max-height: calc(100vh - 10px);
 }
 
 /* Project Detail Split Layout */
