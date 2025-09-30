@@ -1,8 +1,11 @@
 /* Contact Section Styles */
 .contacts-container {
   text-align: center;
-  padding: 100px 40px 120px 40px;
-  max-width: 600px;
+  max-width: 90vw;
+  padding-left: 16vw;
+  padding-right: 2vw;
+  padding-top: 3vh;
+  padding-bottom: 7vh;
   margin: 0 auto;
   overflow: visible;
 }

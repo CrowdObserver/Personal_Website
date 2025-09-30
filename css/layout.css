@@ -1,24 +1,24 @@
 /* Layout and container styles */
 .container {
   position: relative;
-  max-width: calc(100vw - 10px);
-  margin: 20px auto;
-  padding-left: 260px;
-  padding-right: 20px;
-  padding-top: 20px;
-  max-height: calc(100vh - 10px);
+  max-width: 90vw;
+  padding-left: 16vw;
+  padding-right: 2vw;
+  padding-top: 3vh;
+  padding-bottom: 7vh;
+  max-height: 85vh;
 }
 
 /* Project Detail Split Layout */
 .project-content-split {
   display: flex;
   gap: 30px;
-  margin-top: 20px;
+  margin-top: 3vh;
 }
 
 .project-left {
   flex: 1;
-  min-width: 0; /* Allows flex item to shrink */
+  min-width: 0;
 }
 
 .project-right {
