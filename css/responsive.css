@@ -1,4 +1,6 @@
 /* Responsive design styles */
+
+/* Tablet adjustments */
 @media (max-width: 1024px) {
   .project-content-split {
     flex-direction: column;
@@ -12,60 +14,138 @@
     height: 500px;
   }
   
-  /* Landing adjustments for tablets */
+  .poster-container {
+    max-width: 80vw;
+    margin-left: 2vw;
+  }
+  
   .landing-content {
     margin-left: -20px;
     margin-right: -20px;
   }
 }
 
+/* Mobile adjustments */
 @media (max-width: 768px) {
-  /* Landing video adjustments */
-  .landing-video {
-    object-position: center;
-  }
-
-  /* Layout adjustments */
+  /* Fix container layout for mobile */
   .container {
-    padding-left: 20px;
-    margin: 10px;
+    position: static;
+    max-width: 100%;
+    margin: 0;
+    padding: 10px;
+    max-height: none;
   }
   
+  /* Make sidebar horizontal on mobile */
   .sidebar {
     position: relative;
     top: auto;
     left: auto;
     width: 100%;
+    min-width: auto;
+    max-width: none;
     margin-bottom: 20px;
+    padding: 15px;
+  }
+  
+  .sidebar h3 {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+  }
+  
+  /* Make navigation buttons horizontal on mobile */
+  .tab-btn {
+    display: inline-block;
+    width: auto;
+    margin: 5px;
+    padding: 8px 15px;
+    font-size: 14px;
   }
 
-  /* Landing full width on mobile */
+  /* Tab content adjustments */
+  .tab-content {
+    padding: 20px 15px;
+    min-height: auto;
+  }
+  
+  .tab-content h2 {
+    font-size: 1.8rem;
+    margin-left: 0;
+  }
+  
+  .tab-panel h2 {
+    margin-left: 0;
+  }
+
+  /* Landing page mobile fixes */
   .landing-content {
-    margin-left: -20px;
-    margin-right: -20px;
-    padding-top: 40px;
-    border-radius: 4px;
+    margin-left: -15px;
+    margin-right: -15px;
+    padding-top: 20px;
+  }
+  
+  .landing-text {
+    font-size: 16px;
+    padding: 0 15px;
   }
 
-  /* Projects grid */
+  .landing-video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  /* Projects grid mobile */
   .projects-container {
     grid-template-columns: 1fr;
+    margin-top: 5vh;
+    padding: 0 10px;
+  }
+  
+  .project-card {
+    min-height: 250px;
+    padding: 20px;
+  }
+  
+  .project-logo {
+    width: 60px;
+    height: 60px;
   }
 
-  /* PDF container */
+  /* Project details mobile */
+  .project-left {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+  
+  .poster-container {
+    max-width: 100%;
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  /* PDF container mobile */
   .pdf-container {
     height: 400px;
     padding: 15px;
   }
 
-  /* Contacts */
+  /* Contacts mobile */
   .contacts-container {
-    padding: 60px 20px;
+    padding: 20px 15px;
+    min-height: auto;
+  }
+  
+  .contacts-container h2 {
+    margin-top: 20px;
+    margin-right: 0;
+    font-size: 1.8rem;
   }
   
   .contact-btn {
     padding: 15px 20px;
     font-size: 14px;
+    max-width: 100%;
   }
   
   .contact-icon {
@@ -87,15 +167,35 @@
 /* Extra small screens */
 @media (max-width: 480px) {
   .container {
-    margin: 5px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 5px;
+  }
+  
+  .tab-content {
+    padding: 15px 10px;
   }
   
   .landing-content {
-    margin-left: -15px;
-    margin-right: -15px;
-    padding-top: 30px;
-    border-radius: 0;
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+  
+  .projects-container {
+    padding: 0 5px;
+  }
+  
+  .project-card h3 {
+    font-size: 1.2em;
+  }
+  
+  .contact-btn {
+    padding: 12px 15px;
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+  }
+  
+  .contact-label,
+  .contact-info {
+    min-width: auto;
   }
 }

@@ -4,6 +4,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f4f4f4;
+  overflow-x: hidden;
 }
 
 footer {
@@ -17,4 +18,25 @@ footer {
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile text sizing */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  h2 {
+    font-size: 1.5rem !important;
+  }
+  
+  h3 {
+    font-size: 1.2rem !important;
+  }
+  
+  p, li {
+    font-size: 14px;
+    line-height: 1.4;
+  }
 }
