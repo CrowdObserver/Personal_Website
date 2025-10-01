@@ -1,29 +1,34 @@
 /* Layout and container styles */
 .container {
   position: relative;
-  max-width: 90vw;
-  padding-left: 16vw;
-  padding-right: 2vw;
-  padding-top: 3vh;
-  padding-bottom: 7vh;
-  max-height: 85vh;
+  max-width: 82.5vw;
+  margin-top: 3vh;
+  margin-left: auto;
+  margin-right: 1.5vw;
+  max-height: 102vh;
 }
 
 /* Project Detail Split Layout */
 .project-content-split {
   display: flex;
   gap: 30px;
-  margin-top: 3vh;
 }
+
 
 .project-left {
   flex: 1;
   min-width: 0;
+  margin-left: 2vw;
+  margin-top: 8vh;
+}
+
+.project-left h3 {
+  color: #7e90a3;
+  margin-top: 0;
 }
 
 .project-right {
   flex: 1;
-  min-width: 400px;
 }
 
 /* PDF Container */
@@ -32,7 +37,7 @@
   border: 1px solid #dee2e6;
   border-radius: 8px;
   padding: 20px;
-  height: 600px;
+  min-height: 71.5vh;
   display: flex;
   flex-direction: column;
 }

@@ -1,25 +1,16 @@
 /* Contact Section Styles */
 .contacts-container {
   text-align: center;
-  max-width: 90vw;
-  padding-left: 16vw;
-  padding-right: 2vw;
-  padding-top: 3vh;
-  padding-bottom: 7vh;
-  margin: 0 auto;
   overflow: visible;
+  min-height: 60vh;
 }
 
 .contacts-container h2 {
   color: #7e90a3;
   margin-bottom: 20px;
+  margin-right: 2vw;
+  margin-top: 25.5vh;
   font-size: 2em;
-}
-
-.contacts-container p {
-  color: #666;
-  margin-bottom: 40px;
-  font-size: 1.1em;
 }
 
 .contact-buttons {
