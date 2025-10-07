@@ -82,11 +82,41 @@
 
 .project-detail-image {
   width: 100%;
-  max-width: 400px;
+  max-width: 800px;
   height: auto;
   border-radius: 8px;
-  margin: 20px 0;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  display: block;
+}
+
+.project-detail-image:hover {
+  transform: scale(1.02);
+}
+
+.project-detail-split {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.project-detail-left {
+  flex: 1;
+  margin-left: 2vw;
+}
+
+.project-detail-right {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.project-detail-right .project-detail-image {
+  max-width: 100%;
+  margin: 0;
 }
 
 .project-detail h3 {
@@ -125,7 +155,7 @@
 
 .poster-image {
   max-width: 100%;
-  max-height: calc(100% - 60px); /* Account for title and padding */
+  max-height: calc(100% - 60px);
   object-fit: contain;
   border-radius: 4px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -151,4 +181,20 @@
 
 .poster-fallback a:hover {
   text-decoration: underline;
+}
+
+/* Mobile adjustments for project details */
+@media (max-width: 768px) {
+  .project-detail-split {
+    flex-direction: column;
+  }
+  
+  .project-detail-image {
+    max-width: 100%;
+    margin: 15px auto;
+  }
+  
+  .project-detail-right {
+    align-items: center;
+  }
 }
