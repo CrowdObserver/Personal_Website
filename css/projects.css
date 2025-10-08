@@ -75,9 +75,52 @@
   background: #6a7c8f;
 }
 
+/* Project title section with GitHub button */
+.project-title-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
 .project-detail h2 {
   color: #7e90a3;
-  margin-bottom: 20px;
+  margin: 0;
+  flex: 1;
+}
+
+.github-project-btn {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  background: #7e90a3;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 2px solid #7e90a3;
+}
+
+.github-project-btn:hover {
+  background: transparent;
+  color: #333;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.github-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  filter: brightness(0) invert(1);
+}
+
+.github-project-btn:hover .github-icon {
+  filter: none;
 }
 
 .project-detail-image {
@@ -99,7 +142,7 @@
 .project-detail-split {
   display: flex;
   gap: 30px;
-  margin-top: 20px;
+  margin-top: 80px;
 }
 
 .project-detail-left {
@@ -185,6 +228,21 @@
 
 /* Mobile adjustments for project details */
 @media (max-width: 768px) {
+  .project-title-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .project-detail h2 {
+    font-size: 1.5rem;
+  }
+  
+  .github-project-btn {
+    align-self: flex-end;
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+  
   .project-detail-split {
     flex-direction: column;
   }
