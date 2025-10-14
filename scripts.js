@@ -6,6 +6,14 @@ function toggleDarkMode() {
   localStorage.setItem('darkMode', isDarkMode);
 }
 
+function shouldUseDarkMode() {
+  const now = new Date();
+  const hour = now.getHours();
+  
+  return hour >= 18 || hour < 8;
+}
+
+
 function showProjectDetail(projectId) {
   // Hide projects grid
   document.getElementById('projects-grid').style.display = 'none';
@@ -47,7 +55,6 @@ function copyEmail() {
       copyText.classList.remove('show');
     }, 1000);
   }).catch(function(err) {
-    // Fallback for older browsers
     console.error('Could not copy text: ', err);
     alert('Email: ' + email);
   });
@@ -90,11 +97,14 @@ document.querySelectorAll('.project-card').forEach(card => {
   });
 });
 
-// Add poster click handler for full-size viewing
 document.addEventListener('DOMContentLoaded', function() {
   const savedDarkMode = localStorage.getItem('darkMode');
   if (savedDarkMode === 'true') {
     document.body.classList.add('dark-mode');
+  } else {
+    if (shouldUseDarkMode()) {
+      document.body.classList.add('dark-mode');
+    }
   }
 
   const posterImage = document.querySelector('.poster-image');
