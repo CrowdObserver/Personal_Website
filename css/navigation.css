@@ -13,6 +13,11 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   border: 1px solid #e0e0e0;
   z-index: 1000;
+  
+  --sidebar-left: 20px;
+  --sidebar-top: 3vh;
+  --sidebar-width: 10vw;
+  --sidebar-padding: 2vw;
 }
 
 .sidebar h3 {
