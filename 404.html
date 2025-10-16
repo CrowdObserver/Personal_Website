@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>404 — Page Not Found</title>
+  <link rel="stylesheet" href="./css/main.css" />
+</head>
+
+<body>
+  <div class="container">
+    <!-- Navigation Sidebar (keeps same look as main site) -->
+    <nav class="sidebar">
+      <h3>Navigation</h3>
+      <button class="tab-btn" data-tab="landing" onclick="location.href='index.html'">Home</button>
+      <button class="tab-btn" data-tab="projects" onclick="location.href='index.html#projects'">Projects</button>
+      <button class="tab-btn" data-tab="resume" onclick="location.href='index.html#resume'">Resume</button>
+      <button class="tab-btn" data-tab="contacts" onclick="location.href='index.html#contacts'">Contacts</button>
+      
+      <div class="dark-mode-switch-container">
+        <div class="switch" onclick="toggleDarkMode()">
+          <div class="switch-track">
+            <div class="switch-thumb">
+              <img src="./assets/images/sun.svg" alt="Light mode" class="switch-icon sun-icon">
+              <img src="./assets/images/moon.svg" alt="Dark mode" class="switch-icon moon-icon">
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main area: mirror landing layout but show 404 -->
+    <main class="tab-content">
+      <section id="landing" class="tab-panel active">
+        <div class="landing-content">
+          <div class="landing-text">
+            <h1 style="font-size:4rem; margin-top:20vh;">404</h1>
+            <h2 style="margin:6px 0 12px;">Page not found</h2>
+            <p>Sorry, the page you requested doesn't exist.</p>
+            <p><a href="index.html" class="link-button">Return to Home</a></p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <small>© 2025 Cristiano Cordì</small>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
