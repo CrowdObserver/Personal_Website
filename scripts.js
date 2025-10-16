@@ -1,8 +1,8 @@
 function toggleDarkMode() {
-  document.body.classList.toggle('dark-mode');
+  document.documentElement.classList.toggle('dark-mode');
   
   // Save preference to localStorage
-  const isDarkMode = document.body.classList.contains('dark-mode');
+  const isDarkMode = document.documentElement.classList.contains('dark-mode');
   localStorage.setItem('darkMode', isDarkMode);
 }
 
@@ -98,15 +98,6 @@ document.querySelectorAll('.project-card').forEach(card => {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-  const savedDarkMode = localStorage.getItem('darkMode');
-  if (savedDarkMode === 'true') {
-    document.body.classList.add('dark-mode');
-  } else {
-    if (shouldUseDarkMode()) {
-      document.body.classList.add('dark-mode');
-    }
-  }
-
   const posterImage = document.querySelector('.poster-image');
   if (posterImage) {
     posterImage.addEventListener('click', function() {

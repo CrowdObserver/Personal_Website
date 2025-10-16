@@ -5,6 +5,24 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Who Am I?</title>
   <meta name="description" content="Cristiano Cordì - Bioinformatician specializing in machine learning and regulatory genomics. Explore my projects, CV and contact information." />
+  <script>
+    (function() {
+      const savedDarkMode = localStorage.getItem('darkMode');
+      const isDarkMode = savedDarkMode === 'true' || 
+        (savedDarkMode === null && shouldUseDarkMode());
+      
+      function shouldUseDarkMode() {
+        const now = new Date();
+        const hour = now.getHours();
+        return hour >= 18 || hour < 8;
+      }
+      
+      if (isDarkMode) {
+        document.documentElement.classList.add('dark-mode');
+      }
+    })();
+</script>
+
   <link rel="stylesheet" href="./css/main.css" />
 </head>
 
