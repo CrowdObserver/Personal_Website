@@ -13,7 +13,6 @@ function shouldUseDarkMode() {
   return hour >= 18 || hour < 8;
 }
 
-
 function showProjectDetail(projectId) {
   // Hide projects grid
   document.getElementById('projects-grid').style.display = 'none';
@@ -74,18 +73,54 @@ function hideCopyText() {
   }
 }
 
+// Function to switch tabs based on hash or tab name
+function switchToTab(tabName) {
+  // Remove active class from all buttons and panels
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  
+  // Find and activate the correct tab
+  const tabButton = document.querySelector(`[data-tab="${tabName}"]`);
+  const tabPanel = document.getElementById(tabName);
+  
+  if (tabButton && tabPanel) {
+    tabButton.classList.add('active');
+    tabPanel.classList.add('active');
+    
+    // If switching to projects tab, show the grid view
+    if (tabName === 'projects') {
+      showProjectsGrid();
+    }
+  }
+}
+
+// Function to handle URL hash changes
+function handleHashChange() {
+  const hash = window.location.hash.slice(1); // Remove the # symbol
+  
+  if (hash) {
+    // Check if it's a project detail
+    if (hash.startsWith('project-')) {
+      const projectId = hash.replace('project-', '');
+      switchToTab('projects');
+      setTimeout(() => showProjectDetail(projectId), 100);
+    } else {
+      // It's a regular tab
+      switchToTab(hash);
+    }
+  } else {
+    // No hash, default to landing page
+    switchToTab('landing');
+  }
+}
+
 // Tab switching functionality
 document.querySelectorAll('.tab-btn').forEach(btn => {
   btn.addEventListener('click', () => {
-    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
-    btn.classList.add('active');
-    document.getElementById(btn.dataset.tab).classList.add('active');
-    
-    // If switching to projects tab, show the grid view
-    if (btn.dataset.tab === 'projects') {
-      showProjectsGrid();
-    }
+    const tabName = btn.dataset.tab;
+    switchToTab(tabName);
+    // Update URL hash
+    window.location.hash = tabName;
   });
 });
 
@@ -94,10 +129,18 @@ document.querySelectorAll('.project-card').forEach(card => {
   card.addEventListener('click', () => {
     const projectId = card.dataset.project;
     showProjectDetail(projectId);
+    // Update URL hash for deep linking
+    window.location.hash = `project-${projectId}`;
   });
 });
 
+// Handle initial page load and hash changes
+window.addEventListener('hashchange', handleHashChange);
+
 document.addEventListener('DOMContentLoaded', function() {
+  // Handle hash on page load
+  handleHashChange();
+  
   const posterImage = document.querySelector('.poster-image');
   if (posterImage) {
     posterImage.addEventListener('click', function() {
